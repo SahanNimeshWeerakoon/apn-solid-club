@@ -2,11 +2,11 @@
 <!-- 
 <Button :btnClasses="{'btn--lg': true}">test</Button>
 -->
-<div class="app">
+<main class="app">
   <NavBar />
   <Banner />
   <Footer />
-</div>
+</main>
 </template>
 
 <script>
@@ -27,5 +27,8 @@ export default {
 </script>
 
 <style lang="scss">
-
+  .app {
+    background-image: url("./assets/img/bg.png");
+    background-size: cover;
+  }
 </style>

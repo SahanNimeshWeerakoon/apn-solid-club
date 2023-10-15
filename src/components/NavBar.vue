@@ -1,5 +1,5 @@
 <template>
-<nav class="nav container">
+<nav class="nav container pt-5">
     <div class="nav_logo">
         <Logo imgWidth="5rem" fontSize="2.4rem" :fontWeight="400" />
         <!--<img src="../assets/img/logo.png" alt="solid club logo" title="solid club logos" />
@@ -28,6 +28,9 @@ export default {
     @include flex(space-between);
     &_logo {
         @include flex(space-around);
+        h3 {
+            @include flex(space-between);
+        }
         img {
             width: 5rem;
         }
