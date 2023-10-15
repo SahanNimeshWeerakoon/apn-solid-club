@@ -1,12 +1,10 @@
 <template>
-<!-- 
-<Button :btnClasses="{'btn--lg': true}">test</Button>
--->
-<main class="app">
-  <NavBar />
-  <Banner />
-  <Footer />
-</main>
+  <main class="app">
+    <NavBar v-on:loginClick="toggleLogin" />
+    <Banner />
+    <Footer />
+    <Modal :modalShow.sync="modalShow"/>
+  </main>
 </template>
 
 <script>
@@ -14,6 +12,7 @@
 import NavBar from "./components/NavBar.vue";
 import Banner from "./components/Banner.vue";
 import Footer from "./components/Footer.vue";
+import Modal from "./components/Modal.vue";
 
 export default {
   name: "App",
@@ -21,8 +20,19 @@ export default {
     // Button,
     NavBar,
     Banner,
-    Footer
+    Footer,
+    Modal
   },
+  data: function() {
+    return {
+      modalShow: false
+    }
+  },
+  methods: {
+    toggleLogin: function() {
+      this.modalShow = true;
+    }
+  }
 };
 </script>
 
