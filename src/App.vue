@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<!-- 
+<Button :btnClasses="{'btn--lg': true}">test</Button>
+-->
+<div class="app">
+  <NavBar />
+  <Banner />
+  <Footer />
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import Button from "./components/Button.vue";
+import NavBar from "./components/NavBar.vue";
+import Banner from "./components/Banner.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    // Button,
+    NavBar,
+    Banner,
+    Footer
+  },
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
