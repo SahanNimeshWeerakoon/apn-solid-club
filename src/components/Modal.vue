@@ -1,7 +1,10 @@
 <template>
-    <div class="Modal">
-        <b-modal v-model="modal.isVisible" @hidden="handleModalHide">
-            <p class="my-4">Hello from modal!</p>
+    <div class="modal">
+        <b-modal v-model="modal.isVisible" @hidden="handleModalHide" hide-footer>
+            <template #modal-title>
+            {{ title }}
+            </template>
+            <slot></slot>
         </b-modal>
     </div>
 </template>
@@ -16,6 +19,7 @@ export default {
         }
     },
     props: {
+        title: { type: String, default: "" },
         modalShow: { type: Boolean, default: false }
     },
     methods: {
@@ -30,4 +34,6 @@ export default {
     }
 }
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+// modal related styling in src/assets/scss/_common.scss
+</style>

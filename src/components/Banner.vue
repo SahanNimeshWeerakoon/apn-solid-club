@@ -4,8 +4,8 @@
         <h1 class="banner_title">Fixing, Building, and More.</h1>
         <h3 class="banner_subtitle mt-2 mb-5">All in One Place.</h3>
         <div class="banner_btn">
-            <Button :btnClasses="{'button--lg': true}">Register as Technician</Button>
-            <Button :btnClasses="{'button--lg': true}">Find a Technician</Button>
+            <Button :btnClasses="{'button--lg': true}" @click="handleBtnClick('register')">Register as Technician</Button>
+            <Button :btnClasses="{'button--lg': true}" @click="handleBtnClick('find')">Find a Technician</Button>
         </div>
     </div>
 </div>
@@ -17,6 +17,15 @@ export default {
     name: "banner",
     components: {
         Button
+    },
+    methods: {
+        handleBtnClick: function(type) {
+            if(type == 'register') {
+                this.$emit('clickRegisterTech');
+            } else if (type = 'find') {
+                this.$emit('clickFindTech');
+            }
+        }
     }
 }
 </script>

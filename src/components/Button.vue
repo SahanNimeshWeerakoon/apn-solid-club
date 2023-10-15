@@ -25,6 +25,10 @@ export default {
       height: 5rem;
       font-size: 1.25rem;
     }
+    &--full {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
     &:hover {
       cursor: pointer;
     }
