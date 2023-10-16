@@ -1,6 +1,6 @@
 <template>
     <div class="modal">
-        <b-modal v-model="modal.isVisible" @hidden="handleModalHide" hide-footer>
+        <b-modal v-model="modal.isVisible" @hidden="handleModalHide" hide-footer :size="size">
             <template #modal-title>
             {{ title }}
             </template>
@@ -20,6 +20,7 @@ export default {
     },
     props: {
         title: { type: String, default: "" },
+        size: { type: String, default: "sm" },
         modalShow: { type: Boolean, default: false }
     },
     methods: {

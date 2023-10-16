@@ -1,62 +1,30 @@
 <template>
     <div class="modal-content">
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" v-model="register.formData.fullName" id="floatingFullName" placeholder="Your Name">
-            <label for="floatingFullName">Full Name</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" v-model="register.formData.mobile" id="floatingMobileNumber" placeholder="+94711234567">
-            <label for="floatingMobileNumber">Mobile No.</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" v-model="register.formData.address" id="floatingAddress" placeholder="Your Address">
-            <label for="floatingAddress">Address</label>
-        </div>
-        <div class="form-floating mb-3">
-            <select class="form-control" v-model="register.formData.district" id="floatingDistrict" placeholder="1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-            <label for="floatingDistrict">District</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" v-model="register.formData.city" id="floatingCity" placeholder="1">
-            <label for="floatingCity">City</label>
-        </div>
-        
-        <Button :btnClasses="{'button--full': true }" @click="handleSubmit">Register</Button>
+        <Job v-for="job in jobList" :job="job" :key="job.id" @click="handleJobClick" />
     </div>
 </template>
 <script>
-import Button from "../Button";
+import Job from "./Job";
 
 export default {
     name: "FindTechModalContent",
     props: { type: String },
     data: function() {
         return {
-            register: {
-                showPassword: false,
-                passwordInputType: "password",
-                formData: {
-                    fullName: "full name",
-                    mobile: "mobile",
-                    address: "address",
-                    district: 1,
-                    city: 1
-                }
-            }
+            jobList: [
+                { id: 1, name: "Job 1", description: "Job 1 description" },
+                { id: 2, name: "Job 2", description: "Job 2 description" },
+                { id: 3, name: "Job 3", description: "Job 3 description" },
+                { id: 4, name: "Job 4", description: "Job 4 description" }
+            ]
         }
     },
     components: {
-        Button
+        Job
     },
     methods: {
-        handleSubmit: function(type) {
-            this.$emit('modalClose', { formData: this.register.formData });
+        handleJobClick: function(e) {
+            this.$emit('modalClose', e);
         }
     }
 }

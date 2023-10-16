@@ -11,6 +11,16 @@ export default {
             return new Promise((res, rej) => {
                 res(registerData);
             });
+        },
+        findTechRegister: function(registerData) {
+            return new Promise((res, rej) => {
+                res(registerData);
+            });
+        },
+        technicianRegister: function(registerData) {
+            return new Promise((res, rej) => {
+                res(registerData);
+            });
         }
     }
 }

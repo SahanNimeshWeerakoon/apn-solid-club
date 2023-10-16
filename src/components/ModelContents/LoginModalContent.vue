@@ -11,7 +11,7 @@
                     <b-icon icon="eye-fill" font-scale="1" v-else></b-icon>
                 </b-input-group-text>
             </template>
-            <div class="form-floating">
+            <div class="form-floating password">
                 <input :type="login.passwordInputType" v-model="login.formData.password" class="form-control" id="floatingPassword" placeholder="password@123">
                 <label for="floatingPassword">Password</label>
             </div>
@@ -72,8 +72,19 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .modal-content {
+        .form-floating {
+            transform: scale(1);
+            margin: 0;
+            width: auto;
+        }
+        button {
+            color: $secondary-color;
+            &.form-control {
+                color: $primary-color;
+            }
+        }
         .input-group-text {
             padding: 1.15rem 1rem !important;
             border-radius: 0 !important;
