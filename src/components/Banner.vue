@@ -1,5 +1,5 @@
 <template>
-<div class="container mt-5 mb-3">
+<div class="container mt-5 mb-5 pb-5">
     <div class="banner">
         <h1 class="banner_title">Fixing, Building, and More.</h1>
         <h3 class="banner_subtitle mt-2 mb-5">All in One Place.</h3>

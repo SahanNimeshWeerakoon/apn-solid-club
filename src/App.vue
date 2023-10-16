@@ -73,6 +73,7 @@ export default {
         this.setModalData(true, "Customer Registration", "register", "md");
       } else {
         let result = await this.login(e.formData);
+        console.log(result);
       }
     },
     handleRegisterClose: async function(e) {

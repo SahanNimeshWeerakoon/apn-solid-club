@@ -1,5 +1,5 @@
 <template>
-<nav class="nav container pt-5">
+<nav class="nav container pt-5 pb-5">
     <div class="nav_logo">
         <Logo imgWidth="5rem" fontSize="2.4rem" :fontWeight="400" />
     </div>

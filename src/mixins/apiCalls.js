@@ -1,26 +1,23 @@
 import axios from 'axios';
 
 export default {
+    data: function() {
+        return {
+            baseUrl: "http://localhost:5000/"
+        }
+    },
     methods: {
         login: function(loginData) {
-            return new Promise((res, rej) => {
-                res(loginData);
-            });
+            return axios.post(`${this.baseUrl}login`, loginData);
         },
         register: function(registerData) {
-            return new Promise((res, rej) => {
-                res(registerData);
-            });
+            return axios.post(`${this.baseUrl}register`, registerData);
         },
         findTechRegister: function(registerData) {
-            return new Promise((res, rej) => {
-                res(registerData);
-            });
+            return axios.post(`${this.baseUrl}findTechRegister`, registerData);
         },
         technicianRegister: function(registerData) {
-            return new Promise((res, rej) => {
-                res(registerData);
-            });
+            return axios.post(`${this.baseUrl}technicianRegister`, registerData);
         }
     }
 }
