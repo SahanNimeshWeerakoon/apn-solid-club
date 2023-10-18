@@ -18,6 +18,9 @@ export default {
         },
         technicianRegister: function(registerData) {
             return axios.post(`${this.baseUrl}technicianRegister`, registerData);
+        },
+        forgotPassword: function(forgotPasswordData) {
+            return axios.post(`${this.baseUrl}forgotPassword`, forgotPasswordData);
         }
     }
 }

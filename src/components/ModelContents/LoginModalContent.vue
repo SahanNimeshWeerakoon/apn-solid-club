@@ -7,7 +7,7 @@
         <b-input-group class="mt-3">
             <template #append>
                 <b-input-group-text @click="toggleShowPassword">
-                    <b-icon icon="eye-slash-fill" font-scale="1" v-if="login.showPassword"></b-icon>
+                    <b-icon icon="eye-slash-fill" font-scale="1" v-if="!login.showPassword"></b-icon>
                     <b-icon icon="eye-fill" font-scale="1" v-else></b-icon>
                 </b-input-group-text>
             </template>
@@ -24,7 +24,7 @@
         <Button :btnClasses="{'button--full': true }" @click="handleSubmit('submit')">Submit</Button>
         <div class="mt-3 mb-3">
             <small>
-                Forgot <a href="#">Password? </a>
+                Forgot <a href="#" @click="handleSubmit('forgotPassword')">Password? </a>
             </small>
         </div>
         <Button :btnClasses="{'button--full': true }" @click="handleSubmit('register')">Register</Button>

@@ -39,17 +39,24 @@
                     <label for="floatingCity">City</label>
                 </div>
             </div>
-            <div class="createJob_map"></div>
+            <div class="createJob_map">
+                <LeafMap />
+            </div>
         </div>
         <Button :btnClasses="{ 'button--tinyRadius': true }" @click="handleNextClick">Next</Button>
     </div>
 </template>
 <script>
 import Button from "../Button.vue";
+import LeafMap from "../LeafMap.vue";
 
 export default {
     name: "FindTechCreateModalContent",
     props: { type: String },
+    components: {
+        Button,
+        LeafMap
+    },
     data: function() {
         return {
             findTech: {
@@ -63,9 +70,6 @@ export default {
                 }
             }
         }
-    },
-    components: {
-        Button
     },
     methods: {
         handleNextClick: function(e) {
@@ -85,6 +89,7 @@ export default {
         button {
             margin-right: 0;
             margin-left: auto;
+            color: $secondary-color;
         }
     }
 </style>

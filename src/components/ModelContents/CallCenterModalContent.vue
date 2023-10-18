@@ -12,8 +12,9 @@
     </div>
 </template>
 <script>
+
 export default {
-    name: "CallCenterModalContent"
+    name: "CallCenterModalContent",
 }
 </script>
 <style lang="scss" scoped>
