@@ -1,5 +1,5 @@
 <template>
-  <l-map style="height: 510px" :zoom="zoom" :center="center" @click="handleLatLang">
+  <l-map :zoom="zoom" :center="center" @click="handleLatLang">
     <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
     <l-marker :lat-lng="markerLatLng"></l-marker>
   </l-map>
@@ -42,3 +42,11 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .vue2leaflet-map {
+    height: 510px;
+    @media screen and (max-width: $mobile-breakpoint) {
+      height: 250px;
+    }
+  }
+</style>

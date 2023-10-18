@@ -17,7 +17,7 @@
             </div>
             <!--<b-form-input :type="login.passwordInputType"></b-form-input>-->
         </b-input-group>
-        <div class="form-group mt-3 mb-3">
+        <div class="form-group mt-3 mb-3 remember-me">
             <input type="checkbox" class="mr-1" v-model="login.formData.rememberMe" />
             <small class="remember">Remember Me</small>
         </div>
@@ -31,9 +31,9 @@
         <div class="row mt-3">
             <div class="col-6"></div>
             <div class="col-6">
-                <Button :btnClasses="{'form-control': true, 'login-with': true }">
+                <Button :btnClasses="{'button--tinyRadius': true, 'button--position-right': true, 'login-with': true }">
                     Login with
-                    <img src="https://seeklogo.com/images/M/microsoft-365-2022-logo-7B23759A49-seeklogo.com.png" style="width:25px;" class="">
+                    <img src="https://seeklogo.com/images/M/microsoft-365-2022-logo-7B23759A49-seeklogo.com.png" class="">
                 </Button>
             </div>
         </div>
@@ -74,6 +74,9 @@ export default {
 </script>
 <style lang="scss" scoped>
     .modal-content {
+        .remember-me {
+            @include flex(flex-start);
+        }
         .form-floating {
             transform: scale(1);
             margin: 0;
@@ -104,8 +107,16 @@ export default {
         }
         .login-with {
             @include flex();
+            background: transparent;
+            color: $primary-color;
+            border: 0.2px solid $primary-color;
+            width: 100%;
+            @media screen and (max-width: $mobile-breakpoint) {
+                width: 80%;
+            }
             img {
                 margin-left: 0.5rem;
+                width: 1.25rem;
             }
         }
     }

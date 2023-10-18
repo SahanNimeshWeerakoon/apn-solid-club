@@ -104,8 +104,8 @@ export default {
       // this.modalClose();
     },
     handleTechnicianRegisterClose: async function(e) {
-      let result = await this.technicianRegister(e.formData);
-      this.modalClose();
+      let { data } = await this.technicianRegister(e.formData);
+      if(data.status) this.setModalData(true, "Customer Registration", "registerSuccess", "md");
     },
     handleFindTechClose: function(e) {
       this.setModalData(true, "Find a Technician - Create Job", "findTechCreate", "xl");

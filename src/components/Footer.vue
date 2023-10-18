@@ -76,6 +76,9 @@ export default {
         color: $secondary-color;
     }
     &_logo {
+        @media screen and (max-width: $mobile-breakpoint) {
+            text-align: center
+        }
         img {
             margin-right: 1rem;
         }
@@ -85,7 +88,9 @@ export default {
     }
     &_pagelinks {
         border-bottom: 1px solid $secondary-color;
-        
+        @media screen and (max-width: $mobile-breakpoint) {
+            margin-top: 3rem;
+        }
     }
     &_followus {
         a {

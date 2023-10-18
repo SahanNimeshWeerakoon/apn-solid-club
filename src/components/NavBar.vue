@@ -1,5 +1,5 @@
 <template>
-<nav class="nav container pt-4 pb-5">
+<nav class="nav container pt-5">
     <div class="nav_logo">
         <Logo imgWidth="5rem" fontSize="2.4rem" :fontWeight="400" />
     </div>
@@ -10,25 +10,30 @@
 </nav>
 </template>
 <script>
-import Button from "./Button";
-import Logo from "./Logo";
+    import Button from "./Button";
+    import Logo from "./Logo";
 
-export default {
-    name: "NavBar",
-    components: {
-        Button,
-        Logo
-    },
-    methods: {
-        handleLoginClick: function() {
-            this.$emit('loginClick');
+    export default {
+        name: "NavBar",
+        components: {
+            Button,
+            Logo
+        },
+        methods: {
+            handleLoginClick: function() {
+                this.$emit('loginClick');
+            }
         }
     }
-}
 </script>
 <style lang="scss">
     .nav {
         @include flex(space-between);
+        padding-bottom: 3rem;
+        @media screen and (max-width: $mobile-breakpoint) {
+            @include flex(center, center, column);
+            padding-bottom: 0;
+        }
         &_logo {
             @include flex(space-around);
             h3 {

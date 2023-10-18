@@ -1,7 +1,7 @@
 <template>
     <div class="modal-content">
         <b-icon icon="emoji-dizzy-fill" size="4"></b-icon>
-        <h3>Sorry your registration Failed!</h3>
+        <h3 class="pt-4 pb-4">Sorry your registration Failed!</h3>
         <Button @click="handleClose">close</Button>
     </div>
 </template>
@@ -39,7 +39,6 @@ export default {
         button {
             margin-right: 0;
             margin-left: auto;
-            color: $secondary-color;
         }
     }
 </style>

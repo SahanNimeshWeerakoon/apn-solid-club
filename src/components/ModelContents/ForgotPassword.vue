@@ -43,7 +43,6 @@ export default {
             width: auto;
         }
         button {
-            color: $secondary-color;
             &.form-control {
                 color: $primary-color;
             }

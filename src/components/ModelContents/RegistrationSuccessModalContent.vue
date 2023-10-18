@@ -39,7 +39,6 @@ export default {
         button {
             margin-right: 0;
             margin-left: auto;
-            color: $secondary-color;
         }
     }
 </style>

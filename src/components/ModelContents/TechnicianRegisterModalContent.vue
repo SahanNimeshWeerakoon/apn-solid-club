@@ -10,7 +10,7 @@
         </div>
         <div class="form-floating mb-1">
             <input type="text" class="form-control" v-model="register.formData.nic" id="floatingNic" placeholder="Your NIC">
-            <label for="floatingNic">NIC</label>
+            <label for="floatingNic">NIC No.</label>
         </div>
         <div class="form-floating mb-1">
             <input type="text" class="form-control" v-model="register.formData.address" id="floatingAddress" placeholder="Your Address">
@@ -36,7 +36,7 @@
             </select>
             <label for="floatingCity">City</label>
         </div>        
-        <Button :btnClasses="{'button--full': true }" @click="handleSubmit">Register</Button>
+        <Button :btnClasses="{'button--tinyRadius': true, 'position-right': true }" @click="handleSubmit">Register</Button>
     </div>
 </template>
 <script>
@@ -71,5 +71,9 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
+    button {
+        margin-right: 0;
+        margin-left: auto;
+    }
 </style>

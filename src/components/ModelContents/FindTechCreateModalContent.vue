@@ -43,7 +43,7 @@
                 <LeafMap />
             </div>
         </div>
-        <Button :btnClasses="{ 'button--tinyRadius': true }" @click="handleNextClick">Next</Button>
+        <Button :btnClasses="{ 'button--tinyRadius': true, 'mt-4': true }" @click="handleNextClick">Next</Button>
     </div>
 </template>
 <script>
@@ -84,12 +84,14 @@ export default {
             @include flex(space-between);
             >div {
                 width: 50%;
+                @media screen and (max-width: $mobile-breakpoint) {
+                    width: 100%;
+                }
             }
         }
         button {
             margin-right: 0;
             margin-left: auto;
-            color: $secondary-color;
         }
     }
 </style>

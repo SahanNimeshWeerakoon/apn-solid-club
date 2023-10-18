@@ -21,9 +21,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .modal-content {
-    @include flex();
+    @include flex(center, center, column);
     button {
         color: $secondary-color;
+        font-size: 1.25rem;
     }
 }
 </style>

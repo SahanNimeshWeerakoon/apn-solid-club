@@ -32,6 +32,9 @@ export default {
 <style lang="scss">
 .banner {
     width: 50%;
+    @media screen and (max-width: $mobile-breakpoint) {
+        width: 70%;
+    }
     h1 {
         font-weight: 900;
         font-size: 3.25rem;

@@ -14,7 +14,6 @@ export default {
 <style lang="scss">
   .button {
     background: $primary-color;
-    color: $secondary-color;
     width: 7.5rem;
     height: 2.5rem;
     border: none;
@@ -31,6 +30,10 @@ export default {
     }
     &--tinyRadius {
       border-radius: 0.5rem;
+    }
+    &--position-right {
+      margin-left: auto;
+      margin-right: 0;
     }
     &:hover {
       cursor: pointer;
